@@ -1,45 +1,46 @@
-# Pursuit-Core-npm-and-Modules-Lab
+# Playing with modules in Node.js Lab
 
-# 1. npm with Chalk
+In this lab you will be learning how to use `npm` to install 3rd party modules as well as how to create your own modules, how to export it, import it and use it.
+
+## 1. Chalk
 
 ### Setup
 
 - In a new folder `trychalk`, create an `app.js` file.
-- In the command line, enter `npm init`, which will begin setting up a `package.json` file. Keep on pressing `<enter>` until it stops asking questions. You should now see a `package.json` file in your folder.
-- Enter `npm install --save chalk`. This will install the `chalk` module.
-  - In your `package.json`, under `dependecies`, you should see `chalk` followed by a version number.
-  - A `node_modules` folder should be created, with a number of sub-folders. These should include the folder for the `chalk` module and a folder for each module that chalk depends on.
-- In your `app.js` file, require the `chalk` module. With npm modules, like with the core node modules, you can just enter the name of the module as the string for `require`. You do not need to enter the entire path.
+- While being in the `trychalk` directory, in the command line, you will want to execute `npm init`<sup>[1](https://docs.npmjs.com/cli/init)</sup>, which will begin setting up a `package.json` file. You can do `npm init --yes` to accept all the defaults, or just `npm init` to have more control of what gets put on your initial `package.json`. Take a look at the newly created `package.json` in your folder. 
+- Enter `npm install chalk`. This will install the `chalk` module as a dependency for your project.
+  - In your `package.json`, under `dependencies`, you should see `chalk` followed by a version number.
+  - A `node_modules` folder should've been created, with a number of sub-folders. These should include the folder for the `chalk` module and a folder for each module that chalk depends on.
+- In your `app.js` file, require the `chalk` module. With npm modules(3rd party modules), like with the core node modules, you can just enter the name of the module as the string for `require`. You do not need to enter the entire path.
 - Read the [chalk module documentation](https://www.npmjs.com/package/chalk)
 
 ### Exercises
 
-1. Write a function called `helloBlue` that will console.log the string 'Hello world' in blue.
-2. Write a function called `helloRed` that will console.log the string 'Hello world' in red.
-3. Write a function called `stringToColor`. It should take two arguments: a string and a color. The function should log the string to the console in the given color. For example, `stringToColor('this is a test', 'red')` woll log  `"this is a test` in red.
-4. Write a function called `evensBlueOddsYellow` that takes a string as an argument. It should log all even words in blue and all odd words in yellow. For example, `evensBlueOddsYellow('this is a test')` will log `'this'` in yellow, `'is'` in blue, `'a'` in yellow, and `'test'` in blue.
+1. Write a function called `helloBlue` that will log the string `'Hello world'` in blue.
+2. Write a function called `helloRed` that will log the string `'Hello world'` in red.
+3. Write a function called `stringToColor`. It should take two arguments: a string and a color. The function should log the string to the console in the given color. For example, `stringToColor('this is a test', 'red')` will log  `this is a test` in red.
+4. Write a function called `evensBlueOddsYellow` that takes a string as an argument. It should log all words at an even position/order in blue and all words in an odd position in yellow. For example, `evensBlueOddsYellow('this is a test')` will log `'this'` in yellow, `'is'` in blue, `'a'` in yellow, and `'test'` in blue.
 5. Write a function called `angryText` that takes a string as an argument. It should log that string in red, underlined, and bold capital letters.
 6. Write a function called `backgroundCyan` that takes a string as an argument, and logs that string in white font color and cyan background-color (check the chalk documentation to see how to change background colors).
 7. Write a function called `boldFirstUnderlineLast` that takes a string as an argument and logs the string, with the first word in bold and the last word underlined.
-8. Write a function called `commandLineChalk` that takes the arguments entered in the command line. The function should log out whatever was entered into the terminal, in a color of your choice. Try adding more command line argument options so you can specify the color, background color, etc. **hint**: use `process.argv`.
+8. Write a function called `commandLineChalk` that takes the arguments entered in the command line. The function should log out whatever was entered into the terminal, in a color of your choice. Try adding more command line argument options so you can specify the color, background color, etc. **Hint**: Take a look at `process.argv`.
 
-# 2. Building a custom module
+## 2. Build your own module
 
-## Setup
+### Setup
 
 - Create a new folder.
 - Add a `main.js` file to the folder.
-
-### Math Module
-
 - Add a `math-module.js` file to your folder
+
+### Exercises
 - In the `math-module.js` file add a function called `sum`. The `sum` function should take two arguments and return their sum.
 
-Example:
+  Example:
 
-```js
-sum(3, 6); //returns 9
-```
+  ```js
+  sum(3, 6); //returns 9
+  ```
 
 - Add a `module.exports` statement at the bottom of the `math-module.js` file.
 - Add the `sum` function to `module.exports`.
@@ -47,31 +48,35 @@ sum(3, 6); //returns 9
 - Call the `sum` function from the `main.js` file and save the result to a new variable.
 - Add a `console.log` statement that logs the saved variable.
 - Open the terminal and run the `main.js` file. You should see the output from the `sum` function
-- Add three more functions to the `math.module.js` file:
-1. A `multiply` function (takes two arguments and returns their product).
-2. A `divide` function (takes two arguments and returns the first argument divided by the second).
-3. A `square` function (takes one argument and returns its square).
+- Add three more functions to the `math-module.js` file:
+  1. A `multiply` function (takes two arguments and returns their product).
+  2. A `divide` function (takes two arguments and returns the first argument divided by the second).
+  3. A `square` function (takes one argument and returns its square).
 
-Examples:
+  Examples:
 
-```js
-multiply(2, 5); //returns 10
-divide(20, 10); //returns 2
-square(5); //returns 25
-```
+  ```js
+  multiply(2, 5); //returns 10
+  divide(20, 10); //returns 2
+  square(5); //returns 25
+  ```
 
-- Add the `multiply`, `divide`, and `square` functions to `module.exports` in the `math-module.js` file.
-- In the `main.js` file, use the use the imported `math-module.js` file to call the three new functions, and save the results as new variables
+- Export the `multiply`, `divide`, and `square` functions by adding them to `module.exports` in the `math-module.js` file.
+- In the `main.js` file, use the imported `math-module.js` file to call the three new functions, and save the results as new variables
 - Log the saved variable.
 - Open the terminal and run the `main.js` file. You should see the output from all the functions.
 
-### String Module
+## 3. String Module
 
-- Create a new file called `strings-module` that contains at least three string functions (for example: return the first letter of a string, reverse a string, etc.) of the choosing.
+- Create a new file called `strings-module.js` that contains at least the string functions 
+  - `firstChar` - returns the first character.
+  - `compare` - compares string A to string B if they are equal return true.
+  - `reverse` - reverse the string passed as an argument
+  - Come up with one of your own functions.
 - Import the `string-module` into the `main.js` file and try calling and logging the functions from `string-module`.
 - Can you also import the `string-module` into the `math-module` and use it in there? Or vice versa?
 
-### Challenge - Modular: Files By Extension
+## 4. Bonus/Challenge - Files By Extension
 
 The following is a code for an program that takes a user's input of a folder and an extension, and lists all the files in that folder that have the given extension.
 
@@ -115,3 +120,6 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
   - the folder
   - the extension
   - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the error. Otherwise, it logs the list, with each element in a separate line.
+
+### References 
+1. [`npm init`](https://docs.npmjs.com/cli/init) docs page.
