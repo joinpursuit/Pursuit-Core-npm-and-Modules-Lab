@@ -53,7 +53,9 @@ function boldFirstUnderlineLast (string) {
 }
 
 function commandLineChalk () {
-    
+    process.argv.forEach(function(val, index){
+        console.log(chalk.green(index + ' : ' + val))
+      })
 }
 
 helloBlue();
