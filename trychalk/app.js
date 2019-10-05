@@ -10,6 +10,7 @@ function helloRed() {
 
 function stringToColor(string, color) {
   let myColor = chalk.keyword(`${color}`)
+  //console.log(chalk[color](string))
   console.log(myColor(`${string}`))
 }
 
