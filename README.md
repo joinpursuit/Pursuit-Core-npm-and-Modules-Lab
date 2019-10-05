@@ -1,6 +1,8 @@
-# Pursuit-Core-npm-and-Modules-Lab
+# Playing with modules in Node.js Lab
 
-# 1. Node.js with Chalk
+In this lab you will be learning how to use `npm` to install 3rd party modules as well as how to create your own modules, how to export it, import it and use it.
+
+## 1. Chalk
 
 ### Setup
 
@@ -23,23 +25,22 @@
 7. Write a function called `boldFirstUnderlineLast` that takes a string as an argument and logs the string, with the first word in bold and the last word underlined.
 8. Write a function called `commandLineChalk` that takes the arguments entered in the command line. The function should log out whatever was entered into the terminal, in a color of your choice. Try adding more command line argument options so you can specify the color, background color, etc. **Hint**: Take a look at `process.argv`.
 
-# 2. Building a custom module
+## 2. Build your own module
 
-## Setup
+### Setup
 
 - Create a new folder.
 - Add a `main.js` file to the folder.
-
-### Math Module
-
 - Add a `math-module.js` file to your folder
+
+### Exercises
 - In the `math-module.js` file add a function called `sum`. The `sum` function should take two arguments and return their sum.
 
-Example:
+  Example:
 
-```js
-sum(3, 6); //returns 9
-```
+  ```js
+  sum(3, 6); //returns 9
+  ```
 
 - Add a `module.exports` statement at the bottom of the `math-module.js` file.
 - Add the `sum` function to `module.exports`.
@@ -65,12 +66,13 @@ square(5); //returns 25
 - Log the saved variable.
 - Open the terminal and run the `main.js` file. You should see the output from all the functions.
 
-### String Module
+## 3. String Module
 
 - Create a new file called `strings-module` that contains at least three string functions (for example: return the first letter of a string, reverse a string, etc.) of the choosing.
 - Import the `string-module` into the `main.js` file and try calling and logging the functions from `string-module`.
 - Can you also import the `string-module` into the `math-module` and use it in there? Or vice versa?
-### Challenge - Modular: Files By Extension
+
+## 4. Bonus/Challenge - Files By Extension
 
 The following is a code for an program that takes a user's input of a folder and an extension, and lists all the files in that folder that have the given extension.
 
