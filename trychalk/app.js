@@ -16,3 +16,4 @@ myFunction.angryText("What are you doing?!")
 
 myFunction.backgroundCyan("Deep breath. Everything will be okay.")
 
+myFunction.boldFirstUnderlineLast("This is a test")

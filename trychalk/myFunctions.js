@@ -15,7 +15,7 @@ const stringToColor = (string, color) => {
 const evensBlueOddsYellow = (string) => {
     let splitWord = string.split(" ");
     let colorWord = "";
-    for(i = 0; i < splitWord.length; i++) {
+    for(let i = 0; i < splitWord.length; i++) {
         if (i % 2 === 0) {
             colorWord += chalk.yellow(splitWord[i]) + " ";
         } else {
@@ -33,6 +33,23 @@ const backgroundCyan = (string) => {
     console.log(chalk.white.bgCyan(string))
 }
 
+const boldFirstUnderlineLast = (string) => {
+    let splitWord = string.split(" ")
+    let boldUnderline = ""
+    for (let i = 0; i < splitWord.length; i++) {
+        if (i === 0) {
+            boldUnderline += chalk.bold(splitWord[i]) + " ";
+        } else if (i === splitWord.length - 1) {
+            boldUnderline += chalk.underline(splitWord[i]) + " ";
+        } else {
+            boldUnderline += splitWord[i] + " "
+        }
+    }
+    console.log(boldUnderline);
+}
+
+
+
 module.exports = {
     helloBlue,
     helloRed,
@@ -40,4 +57,5 @@ module.exports = {
     evensBlueOddsYellow,
     angryText,
     backgroundCyan,
+    boldFirstUnderlineLast,
 }
