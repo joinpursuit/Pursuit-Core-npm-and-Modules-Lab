@@ -49,3 +49,12 @@ const angryText = (str) => {
   console.log(chalk.red.underline.bold(str.toUpperCase()));
 }
 angryText("trying to ignore their loud music");
+
+console.log("q6");
+//6. Write a function called `backgroundCyan` that takes a string as an argument, and logs
+//that string in white font color and cyan background-color (check the chalk documentation to
+//see how to change background colors).
+const backgroundCyan = (str) => {
+  console.log(chalk.white.bgCyan(str));
+}
+backgroundCyan("who doesn't like cyan");
