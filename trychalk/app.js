@@ -16,4 +16,6 @@ myFunction.angryText("What are you doing?!")
 
 myFunction.backgroundCyan("Deep breath. Everything will be okay.")
 
-myFunction.boldFirstUnderlineLast("This is a test")
+myFunction.boldFirstUnderlineLast("This is a test that should bold the first word and underline the last.")
+
+myFunction.commandLineChalk()

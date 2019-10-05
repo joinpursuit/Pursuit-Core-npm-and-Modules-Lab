@@ -48,7 +48,19 @@ const boldFirstUnderlineLast = (string) => {
     console.log(boldUnderline);
 }
 
-
+const commandLineChalk = () => {
+    let colorCommand = process.argv[2]
+    let printWord = process.argv[3]
+    if (colorCommand.includes("bg")) {
+        let splitColor = colorCommand.split("")
+        splitColor.shift()
+        splitColor.shift()
+        let joinColor = splitColor.join("")
+        console.log(chalk.bgKeyword(joinColor.toLowerCase())(printWord))
+    } else {
+        console.log(chalk.keyword(colorCommand)(printWord))
+    }
+}
 
 module.exports = {
     helloBlue,
@@ -58,4 +70,5 @@ module.exports = {
     angryText,
     backgroundCyan,
     boldFirstUnderlineLast,
+    commandLineChalk,
 }
