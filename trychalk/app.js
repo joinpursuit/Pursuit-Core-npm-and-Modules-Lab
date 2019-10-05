@@ -18,7 +18,7 @@ console.log('----- QUESTION 3 -----');
 
 const stringToColor = (string, color) => {
     let colors = `${color}`;
-    let colored = chalk[colors](string)
+    let colored = chalk[colors](string);
     console.log(colored);
 }
 stringToColor('this is a test', 'green');
@@ -40,7 +40,7 @@ const evensBlueOddsYellow = (string) => {
     }
     console.log(stringJoin.join(' '));
 }
-evensBlueOddsYellow('This is a test')
+evensBlueOddsYellow('This is a test');
 
 console.log('----- QUESTION 5 -----');
 const angryText = (string) => {
@@ -64,14 +64,14 @@ const boldFirstUnderlineLast = (string) => {
     let last  = chalk.underline(array[array.length - 1]);
     array[0] = first;
     array[array.length-1] = last;
-    console.log(array.join(' '))
+    console.log(array.join(' '));
 }
-boldFirstUnderlineLast('mic check 1212')
+boldFirstUnderlineLast('mic check 1212');
 
 console.log('----- QUESTION 8 -----');
 
 const commandLineChalk = () => {
     const args = process.argv.slice(2)
-    console.log(chalk.magentaBright(args.join(' ')))
+    console.log(chalk.magentaBright(args.join(' ')));
 }
 commandLineChalk();
