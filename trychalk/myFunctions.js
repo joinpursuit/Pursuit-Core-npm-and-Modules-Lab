@@ -25,11 +25,14 @@ const evensBlueOddsYellow = (string) => {
     console.log(colorWord);
 }
 
-
+const angryText = (string) => {
+    console.log(chalk.red.bold.underline(string.toUpperCase()))
+}
 
 module.exports = {
     helloBlue,
     helloRed,
     stringToColor,
     evensBlueOddsYellow,
+    angryText,
 }
