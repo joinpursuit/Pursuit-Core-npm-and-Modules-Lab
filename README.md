@@ -48,21 +48,21 @@ In this lab you will be learning how to use `npm` to install 3rd party modules a
 - Call the `sum` function from the `main.js` file and save the result to a new variable.
 - Add a `console.log` statement that logs the saved variable.
 - Open the terminal and run the `main.js` file. You should see the output from the `sum` function
-- Add three more functions to the `math.module.js` file:
-1. A `multiply` function (takes two arguments and returns their product).
-2. A `divide` function (takes two arguments and returns the first argument divided by the second).
-3. A `square` function (takes one argument and returns its square).
+- Add three more functions to the `math-module.js` file:
+  1. A `multiply` function (takes two arguments and returns their product).
+  2. A `divide` function (takes two arguments and returns the first argument divided by the second).
+  3. A `square` function (takes one argument and returns its square).
 
-Examples:
+  Examples:
 
-```js
-multiply(2, 5); //returns 10
-divide(20, 10); //returns 2
-square(5); //returns 25
-```
+  ```js
+  multiply(2, 5); //returns 10
+  divide(20, 10); //returns 2
+  square(5); //returns 25
+  ```
 
-- Add the `multiply`, `divide`, and `square` functions to `module.exports` in the `math-module.js` file.
-- In the `main.js` file, use the use the imported `math-module.js` file to call the three new functions, and save the results as new variables
+- Export the `multiply`, `divide`, and `square` functions by adding them to `module.exports` in the `math-module.js` file.
+- In the `main.js` file, use the imported `math-module.js` file to call the three new functions, and save the results as new variables
 - Log the saved variable.
 - Open the terminal and run the `main.js` file. You should see the output from all the functions.
 
