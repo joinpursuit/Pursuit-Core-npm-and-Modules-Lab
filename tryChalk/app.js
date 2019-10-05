@@ -58,3 +58,19 @@ const backgroundCyan = (str) => {
   console.log(chalk.white.bgCyan(str));
 }
 backgroundCyan("who doesn't like cyan");
+
+console.log("q7");
+//7. Write a function called `boldFirstUnderlineLast` that takes a string as an argument
+//and logs the string, with the first word in bold and the last word underlined.
+// const boldFirstUnderlineLast = (str) => {
+//   console.log(chalk.bold(str[0]),)
+// }
+
+console.log("q8");
+//8. Write a function called `commandLineChalk` that takes the arguments entered in the
+//command line. The function should log out whatever was entered into the terminal, in a
+//color of your choice. Try adding more command line argument options so you can specify the
+//color, background color, etc. **hint**: use `process.argv`.
+const commandLineChalk = () => {
+  
+}
