@@ -1,11 +1,11 @@
 # Pursuit-Core-npm-and-Modules-Lab
 
-# 1. npm with Chalk
+# 1. Node.js with Chalk
 
 ### Setup
 
 - In a new folder `trychalk`, create an `app.js` file.
-- In the command line, enter `npm init`, which will begin setting up a `package.json` file. Keep on pressing `<enter>` until it stops asking questions. You should now see a `package.json` file in your folder.
+- While being in the `trychalk` directory, in the command line, you will want to execute `npm init`<sup>[1](https://docs.npmjs.com/cli/init)</sup>, which will begin setting up a `package.json` file. You can do `npm init --yes` to accept all the defaults, or just `npm init` to have more control of what gets put on your initial `package.json`. Take a look at the newly created `package.json` in your folder. 
 - Enter `npm install --save chalk`. This will install the `chalk` module.
   - In your `package.json`, under `dependecies`, you should see `chalk` followed by a version number.
   - A `node_modules` folder should be created, with a number of sub-folders. These should include the folder for the `chalk` module and a folder for each module that chalk depends on.
@@ -70,7 +70,6 @@ square(5); //returns 25
 - Create a new file called `strings-module` that contains at least three string functions (for example: return the first letter of a string, reverse a string, etc.) of the choosing.
 - Import the `string-module` into the `main.js` file and try calling and logging the functions from `string-module`.
 - Can you also import the `string-module` into the `math-module` and use it in there? Or vice versa?
-
 ### Challenge - Modular: Files By Extension
 
 The following is a code for an program that takes a user's input of a folder and an extension, and lists all the files in that folder that have the given extension.
@@ -115,3 +114,6 @@ In a new folder, create the files `filterFiles.js` and `main.js`.
   - the folder
   - the extension
   - a callback function that takes as arguments an error object and a list. If the error object is not `null`, it logs the string: `'there was an error'` followed by the error. Otherwise, it logs the list, with each element in a separate line.
+
+### References 
+1. [`npm init`](https://docs.npmjs.com/cli/init) docs page.
