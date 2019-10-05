@@ -68,7 +68,11 @@ In this lab you will be learning how to use `npm` to install 3rd party modules a
 
 ## 3. String Module
 
-- Create a new file called `strings-module` that contains at least three string functions (for example: return the first letter of a string, reverse a string, etc.) of the choosing.
+- Create a new file called `strings-module.js` that contains at least the string functions 
+  - `firstChar` - returns the first character.
+  - `compare` - compares string A to string B if they are equal return true.
+  - `reverse` - reverse the string passed as an argument
+  - Come up with one of your own functions.
 - Import the `string-module` into the `main.js` file and try calling and logging the functions from `string-module`.
 - Can you also import the `string-module` into the `math-module` and use it in there? Or vice versa?
 
