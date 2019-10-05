@@ -33,13 +33,22 @@ console.log("q4");
 //`'a'` in yellow, and `'test'` in blue.
 
 // const evensBlueOddsYellow = (str) => {
+//   let evensAndOddsArr = [];
 //   for (let i = 0; i < str.length; i++) {
-//     (str[i] % 2 === 0) ? (str[i] = chalk.blue(str[i])) : (chalk.yellow(str[i]));
+//     for (let j in evensAndOddsArr) {
+//     if (str[i] % 2 === 0) {
+//       str[i] = chalk.blue(str[i]);
+//       evensAndOddsArr.push(str[i]);
+//     } else if (str[i] % 2 !== 0) {
+//       str[i] = chalk.yellow(str[i]);
+//       evensAndOddsArr.push(str[i]);
 //     }
-//     console.log(str);
+//   }
+//   console.log(evensAndOddsArr);
+//   }
 // }
 
-// evensBlueOddsYellow("this is a test");
+evensBlueOddsYellow("this is a test");
 //output should be: this, a - yellow; is, test - blue
 
 console.log("q5");
@@ -72,5 +81,5 @@ console.log("q8");
 //color of your choice. Try adding more command line argument options so you can specify the
 //color, background color, etc. **hint**: use `process.argv`.
 const commandLineChalk = () => {
-  
+
 }
