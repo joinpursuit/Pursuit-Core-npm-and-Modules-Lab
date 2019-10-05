@@ -18,3 +18,7 @@ helloRed(helloWorld);
 //3. Write a function called `stringToColor`. It should take two arguments: a string and a color.
 //The function should log the string to the console in the given color. For example,
 // `stringToColor('this is a test', 'red')` woll log  `"this is a test` in red.
+const stringToColor = (str, color) => {
+  console.log(chalk.keyword(color)(str));
+}
+stringToColor("this is a test too", "plum");
