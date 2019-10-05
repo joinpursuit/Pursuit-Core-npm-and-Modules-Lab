@@ -29,10 +29,15 @@ const angryText = (string) => {
     console.log(chalk.red.bold.underline(string.toUpperCase()))
 }
 
+const backgroundCyan = (string) => {
+    console.log(chalk.white.bgCyan(string))
+}
+
 module.exports = {
     helloBlue,
     helloRed,
     stringToColor,
     evensBlueOddsYellow,
     angryText,
+    backgroundCyan,
 }
