@@ -96,7 +96,7 @@ fs.readdir(folder, (err, files) => {
 })
 ```
 
-In a new folder, create the files `filterFiles.js` and `main.js`. 
+In a new folder, create the files `filterFiles.js` and `main.js`.
 
 1. Paste the above code into `filterFiles.js` and rewrite it as follows:
 
