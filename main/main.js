@@ -22,3 +22,6 @@ console.log(firstLetter);
 
 let reverseOrder = stringModuleConnection.reverseString("llama");
 console.log(reverseOrder);
+
+let newArray = stringModuleConnection.stringToArray("alpaca");
+console.log(newArray);
