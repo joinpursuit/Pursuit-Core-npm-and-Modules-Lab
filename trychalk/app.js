@@ -7,9 +7,9 @@ console.log(helloRed.red('Hello World'))
 const chalk = require('chalk')
 const stringToColor = (string, color) =>{
     const chosenColor = chalk.keyword(color)
-    return chosenColor(string)
+    console.log( chosenColor(string))
 }
-console.log(stringToColor("This is a test" , "red"))
+(stringToColor("This is a test" , "red"))
 
 
 const evensBlueOddsYellow = (string) =>{
@@ -26,22 +26,23 @@ const evensBlueOddsYellow = (string) =>{
         }
 
     }
-    return coloredString
+    console.log( coloredString)
 }
-console.log(evensBlueOddsYellow("it is cold outside"))
+evensBlueOddsYellow("it is cold outside")
 
 
 const angryText = (string) =>{
     let capitalString= string.toUpperCase()
-   return chalk.red.bold.underline(capitalString)
+   console.log( chalk.red.bold.underline(capitalString))
 }
-console.log(angryText("hello"))
+angryText("hello")
+
 
 const backgroundCyan = (string) =>{
-return chalk.bgCyan.white(string)
+console.log(chalk.bgCyan.white(string))
 
 }
-console.log(backgroundCyan("hello"))
+backgroundCyan("hello")
 
 
 
@@ -59,31 +60,32 @@ const boldFirstUnderlineLast = (string) =>{
           newStr += chalk.bold.underline(words[i])
       }else if (words[i] === firstWord){
            
-            newStr += chalk.bold(words[0])
-            newStr += space
+            newStr += chalk.bold(words[0]) + space
+            
             
         }else if(words[i] !== lastWord)  {
-            newStr += words[i]
-            newStr += space
+            newStr += words[i] + space
+            
            
         }else{
           
-            newStr += chalk.underline(words[words.length-1])
-            newStr += space
+            newStr += chalk.underline(words[words.length-1]) + space
         }
 }
-return newStr
+console.log( newStr)
 }
-console.log(boldFirstUnderlineLast("It is cold outside"))
+boldFirstUnderlineLast("It is cold outside")
 
 
 
 
 
 
-const commandLineChalk = (string, color, backgroundColor) =>{
-    const chosenColor = chalk.keyword(color)
-    const background = chalk.bgKeyword(backgroundColor)
-    return chosenColor(background(string))
-}
-console.log(commandLineChalk("Random String" , "purple" , "yellow"))
+// const commandLineChalk = (string, color, backgroundColor) =>{
+//     const chosenColor = chalk.keyword(color)
+//     const background = chalk.bgKeyword(backgroundColor)
+//     console.log(chosenColor(background(string)))
+// }
+// commandLineChalk("Random String" , "purple" , "yellow")
+
+
