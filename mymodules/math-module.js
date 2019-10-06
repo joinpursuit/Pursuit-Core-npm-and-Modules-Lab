@@ -14,3 +14,8 @@ module.exports = {
     divide,
     square,
 }
+
+let stringThing = require("./strings-module");
+
+let secretMessage = stringThing.threeLettersBack("All this math is fake I don't know what I'm doing");
+console.log(secretMessage)
