@@ -4,7 +4,8 @@
 
 
 /* Modules Init */
-const math = require('./math-module.js')
+const math = require('./math-module.js');
+const string = require('./strings-module.js');
 
 /* Helpers */
 const log = console.log;
@@ -22,3 +23,14 @@ log('quotient of 1200 / 6: ', wantedQuotient);
 
 let wantedSquare = math.square(15);
 log('square of 15: ', wantedSquare);
+
+
+
+let wantedLength = string.length('This is how we do it!');
+log('length of `This is how we do it!`', wantedLength);
+
+let wantedThird = string.third('ABcDEfG');
+log('third character: ', wantedThird);
+
+let wantedFlip = string.flip('Mirror, mirror!');
+log('reverse `Mirror, mirror!`: ', wantedFlip);

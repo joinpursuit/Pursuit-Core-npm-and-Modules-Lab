@@ -1,4 +1,5 @@
 // Joseph P. Pasaoa
+// Math Functions Module
 //
 
 
@@ -21,7 +22,9 @@ const squareThis = (num) => {
 
 
 
-module.exports.sum = sumOfTwo;
-module.exports.multiply = productOfTwo;
-module.exports.divide = quotientOfTwo;
-module.exports.square = squareThis;
+module.exports = {
+  sum: sumOfTwo,
+  multiply: productOfTwo,
+  divide: quotientOfTwo,
+  square: squareThis,
+};
