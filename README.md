@@ -1,4 +1,4 @@
-# Playing with modules in Node.js Lab
+`# Playing with modules in Node.js Lab
 
 In this lab you will be learning how to use `npm` to install 3rd party modules as well as how to create your own modules, how to export it, import it and use it.
 
