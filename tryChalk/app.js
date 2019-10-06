@@ -16,20 +16,9 @@ const boldFirstUnderlineLast = (str) => {
 const commandLineChalk = () => {
     const arr = process.argv;
     const str = arr[2];
-    let args = arr.slice(3);
+    const args = arr.slice(3).join('.');
 
-    args = args.map(ele => `['${ele}']`);
-    log('args ', args, 'chalk'+args.join(''))
-    let qwerqwer = 'chalk' + args.join('') + str;
-    console.log(qwerqwer);
-    
-
-    // for (let i = 3; i < arr.length; i++) {
-        // args += arr[i];
-    // }
-    console.log(arr)
-
-    // console.log(chalk[args](str));
+    console.log(chalk`{${args} ${str}}`);
 }
 
 // console.log(chalk['red']['bold']['underline']('Hello'));
@@ -42,8 +31,4 @@ const commandLineChalk = () => {
 // angryText('Goodbye World');
 // backgroundCyan('Cyanora');
 // boldFirstUnderlineLast('Hello to the world!');
-// commandLineChalk();
-
-
-
-
+commandLineChalk();
