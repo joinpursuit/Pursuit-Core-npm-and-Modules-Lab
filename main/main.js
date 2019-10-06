@@ -16,3 +16,9 @@ console.log(divideResult);
 let squareResult = mathModuleConnection.square(12);
 console.log(squareResult);
 //144
+
+let firstLetter = stringModuleConnection.logFirstLetter("giraffe");
+console.log(firstLetter);
+
+let reverseOrder = stringModuleConnection.reverseString("llama");
+console.log(reverseOrder);
