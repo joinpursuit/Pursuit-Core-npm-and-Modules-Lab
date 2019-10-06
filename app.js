@@ -106,7 +106,3 @@ console.log(chalk.red.bgWhite("============================Question 8===========
 commandLineChalk(process.argv[2]);
 
 
-
-
-
-
