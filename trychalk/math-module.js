@@ -16,3 +16,5 @@ module.exports = {
     divide,
     square
 }
+const stringMod = require("./string-module")
+
