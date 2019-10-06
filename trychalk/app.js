@@ -82,4 +82,3 @@ const commandLineChalk = () => {
     }
 }
 commandLineChalk()
-console.log('----------------------------------------')
