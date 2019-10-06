@@ -32,21 +32,18 @@ console.log("q4");
 //`evensBlueOddsYellow('this is a test')` will log `'this'` in yellow, `'is'` in blue,
 //`'a'` in yellow, and `'test'` in blue.
 
-// const evensBlueOddsYellow = (str) => {
-//   let evensAndOddsArr = [];
-//   for (let i = 0; i < str.length; i++) {
-//     for (let j in evensAndOddsArr) {
-//     if (str[i] % 2 === 0) {
-//       str[i] = chalk.blue(str[i]);
-//       evensAndOddsArr.push(str[i]);
-//     } else if (str[i] % 2 !== 0) {
-//       str[i] = chalk.yellow(str[i]);
-//       evensAndOddsArr.push(str[i]);
-//     }
-//   }
-//   console.log(evensAndOddsArr);
-//   }
-// }
+const evensBlueOddsYellow = (str) => {
+  let stringToEvensOddsArr = str.split(" ");
+  let evensAndOddsArr = [];
+  for (let i = 0; i < stringToEvensOddsArr.length; i++) {
+    if (i % 2 === 0) {
+      evensAndOddsArr.push(chalk.blue(stringToEvensOddsArr[i]));
+    } else if (i % 2 !== 0) {
+      evensAndOddsArr.push(chalk.yellow(stringToEvensOddsArr[i]));
+    }
+  }
+    console.log(evensAndOddsArr.join(" "));
+}
 
 evensBlueOddsYellow("this is a test");
 //output should be: this, a - yellow; is, test - blue
