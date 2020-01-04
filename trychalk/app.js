@@ -20,8 +20,17 @@ const evensBlueOddsYellow = (str) =>{
     }
     return newArr.join(" ")
 }
+const angryTest = (str) =>{
+    return chalk.red.underline.bold(str)
+}
+const backgroundCyan = (str) =>{
+    return chalk.white.bgCyan(str)
+}
 
 console.log(helloBlue());
 console.log(helloRed());
 console.log(stringToColor("this is a test", "orange"));
 console.log(evensBlueOddsYellow("this is a test"));
+console.log(angryTest("this is a test"));
+console.log(backgroundCyan("this is a test"))
+
