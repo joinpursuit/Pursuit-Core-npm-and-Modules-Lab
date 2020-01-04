@@ -13,21 +13,21 @@ console.log("question 4")
 const evensBlueOddYellow = (str)=>{
     let newArr = str.split(" ");
    
-    let output = "";
+    let output = " ";
 
-    newArr.forEach(el => {
-        if(el % 2 === 0){
-            output += `${chalk.blue(newArr[el])}`
+        for(let i = 0; i < newArr.length ; i++){
+        if(i % 2 === 0){
+            output += ` ${chalk.blue(newArr[i])}`
             
         } else{
-             output += `${chalk.yellow(newArr[el])}`
+             output += ` ${chalk.yellow(newArr[i])}`
         }
-    });
+    } 
     
     return output
 }
+ console.log(evensBlueOddYellow("this is a test"))
 
-console.log(evensBlueOddYellow("this is a test"))
 console.log("question 5")
 const angryText = (str)=>{
     let strCap = str.toUpperCase()
@@ -36,3 +36,23 @@ const angryText = (str)=>{
     console.log(chalk.red.underline.bold(strCap))
 }
 angryText("this is a test")
+
+console.log("question 6")
+console.log(chalk.white.bgCyan("this is a test"))
+
+console.log("question 7")
+const boldFirstUnderlineLast = (str) =>{
+    let arr = str.split("");
+    let output7 = " ";
+    for (let i = 0 ; i < arr.length ; i ++){
+        if(i[0]){
+            output7 += ` ${chalk.bold(arr[i])}`
+        } else {
+            output7 += ` ${chalk.underline(arr[i].length-1)}`
+        }
+    }
+    return output7
+}
+console.log(boldFirstUnderlineLast("this is a test"))
+
+console.log("question 8")
