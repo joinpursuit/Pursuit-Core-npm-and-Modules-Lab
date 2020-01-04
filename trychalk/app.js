@@ -1,13 +1,17 @@
 const chalk = require("chalk");
+
 const helloBlue = () =>{
     return chalk.blue("Hello World")
 }
+
 const helloRed = () =>{
     return chalk.red("Hello World")
 }
+
 const stringToColor = (str, color) =>{
     return chalk.keyword(color)(str)
 }
+
 const evensBlueOddsYellow = (str) =>{
     let output = str.split(" ");
     let newArr = []
@@ -26,6 +30,28 @@ const angryTest = (str) =>{
 const backgroundCyan = (str) =>{
     return chalk.white.bgCyan(str)
 }
+const boldFirstUnderlineLast = (str) =>{
+    let newArr = str.split(" ");
+    let newStr = [];
+    for(let i = 0; i < newArr.length; i++){
+        if(newArr[i] === newArr[0]){
+            newStr.push(chalk.bold(newArr[0]))
+        }
+        else if(newArr[i] === newArr[newArr.length - 1]){
+            newStr.push(chalk.underline(newArr[newArr.length - 1]))
+        }else{
+            newStr.push(newArr[i])
+        }
+    }
+    return newStr.join(" ")
+}
+const commandLineChalk = (str)=>{
+
+    process.argv.forEach((str, color) => {
+        return(`${color}: ${str}`);
+      })
+    
+}
 
 console.log(helloBlue());
 console.log(helloRed());
@@ -33,4 +59,4 @@ console.log(stringToColor("this is a test", "orange"));
 console.log(evensBlueOddsYellow("this is a test"));
 console.log(angryTest("this is a test"));
 console.log(backgroundCyan("this is a test"))
-
+console.log(boldFirstUnderlineLast("this is a test"))
