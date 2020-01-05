@@ -64,6 +64,6 @@ console.log(boldFirstUnderlineLast("This is a test"))
 // console.log(process.argv)
 const commandLineChalk = (arg) =>{
     let arr = arg.slice(2)
-    console.log(chalk.bgWhite.blue(arr))
+    console.log(chalk[arr[2]].keyword(arr[1])(arr[0]))
 }
 commandLineChalk(process.argv)
