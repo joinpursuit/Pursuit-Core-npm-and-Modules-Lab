@@ -53,6 +53,12 @@ const blodFirstUnderlineLast = (str) => {
     split[last] = chalk.underline(split[last]);
     console.log(split.join(" "));
 }
-blodFirstUnderlineLast("hey there")
+// blodFirstUnderlineLast("hey there")
 
-console.log(process.argv)
+const process = require('process');
+const commandLineChalk = (arr, color)  => {
+    arr.shift();
+    arr.shift();
+    console.log(chalk.keyword(color)(arr))
+}
+// commandLineChalk(process.argv, "blue");
