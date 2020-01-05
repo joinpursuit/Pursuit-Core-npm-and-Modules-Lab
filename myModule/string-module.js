@@ -4,7 +4,7 @@ const firstChar = (str) => {
 
 const compareStr = (str1,str2) => {
     if(str1 === str2){
-        return true 
+        return true
     }else{
         return false
     }
@@ -17,4 +17,15 @@ const reverse = (str) => {
         arr2.push(arr.pop())
     }
     return arr2.join("")
+}
+
+const strLength = (str) => {
+        return str.length
+}
+
+module.exports = {
+  firstChar,
+  compareStr,
+  reverse,
+  strLength
 }
