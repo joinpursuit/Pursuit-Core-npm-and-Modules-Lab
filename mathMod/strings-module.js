@@ -1,5 +1,5 @@
-let firstChar = (str) => {
- return str.firstChar(0)
+const firstChar = (str) => {
+ 
 }
 
 module.exports = {
