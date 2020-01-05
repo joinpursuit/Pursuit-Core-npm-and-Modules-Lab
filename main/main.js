@@ -1,4 +1,5 @@
 const math = require ("./math-module.js")
+const string = require ("./strings-module.js")
 
 const {
     sum,
@@ -7,10 +8,22 @@ const {
     square
 } = math
 
-console.log(sum(1,9))
-console.log(multiply(2,5))
-console.log(divide(12,4))
-console.log(square(6))
+const {
+    firstChar,
+    compare,
+    reverse,
+    middleChars
+} = string
+
+// console.log(sum(1,9))
+// console.log(multiply(2,5))
+// console.log(divide(12,4))
+// console.log(square(6))
+
+console.log(reverse("hello"))
+console.log(compare("a", "a"))
+console.log(middleChars("yea"))
+console.log(firstChar("hello"))
 
 
 // Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
