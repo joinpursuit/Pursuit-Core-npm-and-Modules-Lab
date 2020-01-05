@@ -52,13 +52,30 @@ backgroundCyan("Did it work?")
 
 
 console.log("Question 7");
-const boldFirstUnderlineLast = (string, i) => {
-    for (let i = 0; i < string.length; i++) {
+const boldFirstUnderlineLast = (string) => {
+    let splitStr = string.split(" ");
+    let newStr = "";
+    for (let i = 0; i < splitStr.length; i++) {
         if (i === 0) {
-            console.log(chalk.bold(string[i]))
-        } else if (i === string.length - 1) {
-            console.log(chalk.underline(string[i]))
+            newStr += chalk.bold(splitStr[i]) + " ";
+        } else if (i === splitStr.length - 1) {
+            newStr += chalk.underline(splitStr[i]);
+        } else {
+            newStr += splitStr[i] + " ";
         }
     }
+    return newStr;
 }
 console.log(boldFirstUnderlineLast("I think I'm getting good at this!"));
+
+
+console.log("Question 8");
+const commandLineChalk = (command, color, bgColor) => {
+    let output = "";
+    for (let i = 2; i < command.length; i++) {
+        output += chalk[color][bgColor](command[i] + " ");
+    }
+    console.log(output);
+}
+commandLineChalk(process.argv, "green", "bgBlue");
+// console.log(process.argv)
