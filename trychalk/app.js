@@ -40,9 +40,7 @@ backgroundCyan("this is cyan")
 
 const boldFirstUnderlineLast = (str) => {
   for(let i = 0; i < str.length; i++){
-    console.log(chalk.bold(str[0]));
-  }
-  console.log(chalk.bold(str[0]));
-
+    
+}
 }
 boldFirstUnderlineLast("This is a test")
