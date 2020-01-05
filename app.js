@@ -56,3 +56,8 @@ const boldFirstUnderlineLast = (str) =>{
 console.log(boldFirstUnderlineLast("this is a test"))
 
 console.log("question 8")
+const commandLineChalk = () => {
+    let arg8 = process.argv.slice(2)
+    console.log(chalk.red(arg8.join(' ')));
+}
+commandLineChalk("this is a test");
