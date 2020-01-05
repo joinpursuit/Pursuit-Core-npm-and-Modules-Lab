@@ -73,10 +73,39 @@ backgroundCyab("I am happy")
 //7. Write a function called `boldFirstUnderlineLast` 
 // that takes a string as an argument and logs the string, with the first word in bold and the last word underlined.
 
+// 7. Write a function called `boldFirstUnderlineLast` 
+// that takes a string as an argument and logs the string, 
+// with the first word in bold and the last word underlined.
+// 8. Write a function called `commandLineChalk` that takes 
+// the arguments entered in the command line. The function 
+// should log out whatever was entered into the terminal, 
+// in a color of your choice. Try adding more command line 
+// argument options so you can specify the color, background 
+// color, etc. **Hint**: Take a look at `process.argv`.
+
+
 const boldFirstUnderlineLast =(string)=>{
-
-let printedString = string.splice(0,1) + 
-
-
+    
+    let stringArr = string.split(" ")
+    let first = stringArr.shift()
+    let last = stringArr.pop()
+  
+    console.log(chalk.bold(first) + " " + stringArr.join(" ") +  " " + chalk.underline(last))
 }
-console.log(boldFirstUnderlineLast())
+boldFirstUnderlineLast("hello I am hungry for soup")
+
+
+
+
+const commandLineChalk = ()=>{
+    console.log(chalk.blue(process.argv.slice(2,5)))
+}
+commandLineChalk()
+
+
+
+
+
+
+//var myArgs = process.argv.slice(2);
+//console.log('myArgs: ', myArgs);
