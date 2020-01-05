@@ -55,3 +55,8 @@ const boldFirstUnderlineLast = (string) => {
 boldFirstUnderlineLast("Hello World")
 
 // question 8
+
+const commandLineChalk = (string) =>{
+    console.log(chalk.green(string))
+}
+commandLineChalk("Hello")
