@@ -33,6 +33,17 @@ console.log(evenBlueOddsYellow("This is a test"))
 
 //question 5
 const angryText = (string) => {
-  (chalk.red.underline.bold(string))
+  console.log(chalk.red.underline.bold(string))
 }
-console.log(angryText("Hello World!"))
+(angryText("Hello World!"))
+
+//question 6
+const backgroundCyan = (string) => {
+  console.log(chalk.white.bgCyan(string))
+}
+(backgroundCyan("Hello World!"))
+
+//question 7
+const boldFirstUnderlineLast = (string) => {
+
+}
