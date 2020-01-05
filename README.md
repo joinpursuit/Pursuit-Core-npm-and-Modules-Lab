@@ -7,7 +7,9 @@ In this lab you will be learning how to use `npm` to install 3rd party modules a
 ### Setup
 
 - In a new folder `trychalk`, create an `app.js` file.
-- While being in the `trychalk` directory, in the command line, you will want to execute `npm init`<sup>[1](https://docs.npmjs.com/cli/init)</sup>, which will begin setting up a `package.json` file. You can do `npm init --yes` to accept all the defaults, or just `npm init` to have more control of what gets put on your initial `package.json`. Take a look at the newly created `package.json` in your folder. 
+- While being in the `trychalk` directory, in the command line, you will want to execute `npm init`<sup>[1](
+  
+)</sup>, which will begin setting up a `package.json` file. You can do `npm init --yes` to accept all the defaults, or just `npm init` to have more control of what gets put on your initial `package.json`. Take a look at the newly created `package.json` in your folder. 
 - Enter `npm install chalk`. This will install the `chalk` module as a dependency for your project.
   - In your `package.json`, under `dependencies`, you should see `chalk` followed by a version number.
   - A `node_modules` folder should've been created, with a number of sub-folders. These should include the folder for the `chalk` module and a folder for each module that chalk depends on.
