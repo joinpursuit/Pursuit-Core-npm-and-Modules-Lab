@@ -1,0 +1,1 @@
+const filterFilesFn = require("./filterFiles.js")
