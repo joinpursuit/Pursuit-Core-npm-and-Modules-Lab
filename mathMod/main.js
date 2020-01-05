@@ -1,5 +1,5 @@
 const mathMod = require("./math-module.js")
-const stringsModule = require("./strings-module")
+const stringsModule = require("./strings-module.js")
 
 console.log(mathMod.sum(3, 6))
 console.log(mathMod.multiply(2,5))
