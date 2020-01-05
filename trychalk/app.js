@@ -36,7 +36,7 @@ console.log(chalk.red.underline.bold(string.toUpperCase()))
 angryText("im angry")
 
 const backgroundCyan = (string) => {
-    console.log(chalk.bgCyan(string))
+    console.log(chalk.bgYellow(string))
 }
 backgroundCyan("hi world")
 
@@ -54,7 +54,7 @@ const boldFirstUnderlineLast = (string) => {
 }
 boldFirstUnderlineLast("how are you doing")
 
-// const commandLineChalk = () => {
-
-// }
-console.log(process.argv)
+const commandLineChalk = (arg,arg2,arg3) => {
+    console.log(chalk[arg3].keyword(arg2)(arg)) 
+}
+commandLineChalk(process.argv[2],process.argv[3],process.argv[4])
