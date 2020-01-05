@@ -45,5 +45,13 @@ const backgroundCyan = (string) => {
 
 //question 7
 const boldFirstUnderlineLast = (string) => {
-
+    let split = string.split(" ")
+    for (let i = 0; i <= split.length; i++){
+        console.log(chalk.bold(split[0]))
+        console.log(chalk.underline(split[split.length-1]))
+    }
+    return split.join(" ")
 }
+boldFirstUnderlineLast("Hello World")
+
+// question 8
