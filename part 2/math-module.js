@@ -9,3 +9,12 @@ module.exports = {
     divide,
     square 
 }
+
+const {
+    firstChar,
+    compare,
+    reverse,
+    returnLastChar
+} = require("./strings-module.js")
+
+returnLastChar("hello")
