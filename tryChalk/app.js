@@ -30,3 +30,9 @@ const evenBlueOddsYellow = (string) =>{
     
 }
 console.log(evenBlueOddsYellow("This is a test"))
+
+//question 5
+const angryText = (string) => {
+  (chalk.red.underline.bold(string))
+}
+console.log(angryText("Hello World!"))
