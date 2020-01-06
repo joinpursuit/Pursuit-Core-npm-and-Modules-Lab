@@ -52,37 +52,42 @@ const chalk = require("chalk");
 
 
 
-
-
-
-
-
 // // 5. Write a function called `angryText` that takes a string as an argument. It should log that string in red, underlined, and bold capital letters.
 
 
 
-const angryText = (string) => {
-    console.log(chalk.red.bold.underline(string))
-}
-angryText("I am angry")
+// const angryText = (string) => {
+//     console.log(chalk.red.bold.underline(string))
+// }
+// angryText("I am angry")
 
-const backgroundCyab = (string) => {
-    console.log(chalk.bgCyan.white(string))
-}
-backgroundCyab("I am happy")
+// const backgroundCyab = (string) => {
+//     console.log(chalk.bgCyan.white(string))
+// }
+// backgroundCyab("I am happy")
 
 // 7. Write a function called `boldFirstUnderlineLast` 
 // that takes a string as an argument and logs the string, with the first word in bold and the last word underlined.
 
-const boldFirstUnderlineLast = (string) =>{
-    let stringArr = string.split(" ")
-    let first = stringArr.shift()
-    let last = stringArr.pop()
-    console.log(chalk.bold(first) + " " + stringArr.join(" ") +  " " + chalk.underline(last))
-}
-boldFirstUnderlineLast('hello I am hungry for soup')
+// const boldFirstUnderlineLast = (string) =>{
+//     let stringArr = string.split(" ")
+//     let first = stringArr.shift()
+//     let last = stringArr.pop()
+//     console.log(chalk.bold(first) + " " + stringArr.join(" ") +  " " + chalk.underline(last))
+// }
+// boldFirstUnderlineLast('hello I am hungry for soup')
 
 // 8. Write a function called `commandLineChalk` that takes the arguments entered in the command line. 
 // The function should log out whatever was entered into the terminal, in a color of your choice. 
 // Try adding more command line argument options so you can specify the color, background color, etc.
 //  **Hint**: Take a look at "process.argv".
+
+const commandLineChalk = (command,color,bgColor) =>{
+    let output = ""
+    for(let i = 2; i < command.length; i++) {
+        output += chalk[color][bgColor](command[i])
+    }
+    console.log(output)
+}
+commandLineChalk(process.argv,"black","yellow")
+
