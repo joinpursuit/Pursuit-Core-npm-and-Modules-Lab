@@ -20,10 +20,17 @@ In this lab you will be learning how to use `npm` to install 3rd party modules a
 2. Write a function called `helloRed` that will log the string `'Hello world'` in red.
 3. Write a function called `stringToColor`. It should take two arguments: a string and a color. The function should log the string to the console in the given color. For example, `stringToColor('this is a test', 'red')` will log  `this is a test` in red.
 4. Write a function called `evensBlueOddsYellow` that takes a string as an argument. It should log all words at an even position/order in blue and all words in an odd position in yellow. For example, `evensBlueOddsYellow('this is a test')` will log `'this'` in yellow, `'is'` in blue, `'a'` in yellow, and `'test'` in blue.
-5. Write a function called `angryText` that takes a string as an argument. It should log that string in red, underlined, and bold capital letters.
+5. Write a function called `angryText` that takes a string as an argument. It should log that string in red, underlined, and bold capital letters. 
 6. Write a function called `backgroundCyan` that takes a string as an argument, and logs that string in white font color and cyan background-color (check the chalk documentation to see how to change background colors).
-7. Write a function called `boldFirstUnderlineLast` that takes a string as an argument and logs the string, with the first word in bold and the last word underlined.
-8. Write a function called `commandLineChalk` that takes the arguments entered in the command line. The function should log out whatever was entered into the terminal, in a color of your choice. Try adding more command line argument options so you can specify the color, background color, etc. **Hint**: Take a look at `process.argv`.
+7. Write a function called `boldFirstUnderlineLast` 
+that takes a string as an argument and logs the string, 
+with the first word in bold and the last word underlined.
+8. Write a function called `commandLineChalk` that takes 
+the arguments entered in the command line. The function 
+should log out whatever was entered into the terminal, 
+in a color of your choice. Try adding more command line 
+argument options so you can specify the color, background 
+color, etc. **Hint**: Take a look at `process.argv`.
 
 ## 2. Build your own module
 
