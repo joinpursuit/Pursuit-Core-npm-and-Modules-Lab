@@ -26,3 +26,6 @@ const {
 } = require("./strings-module.js")
 
 returnLastChar("hello")
+
+
+console.log(sum2())
